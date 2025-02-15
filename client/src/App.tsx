@@ -1,8 +1,12 @@
+import { Routes, Route } from "react-router-dom";
+import MainPage from "./components/pages/Mainpage";
+import NotFoundPage from "./components/pages/NotFoundPage";
 function App() {
   return (
-    <div className="flex bg-cyan-900 items-center text-center justify-center">
-      123
-    </div>
-  )
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
+  );
 }
-export default App
+export default App;
